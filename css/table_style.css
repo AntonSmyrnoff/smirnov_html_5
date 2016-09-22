@@ -6,98 +6,156 @@
 .wrapper {
 	width: 480px;
 	height: 520px;
-	position: relative;
 	margin: 50px auto;
-	overflow: hidden;
+	display: grid;
+	grid-template-columns: [one] 1fr [two] 1fr [three] 1fr [four] 2fr [five] 1.5fr [six] 1.5fr [seven];
+	grid-template-rows: [one] 1fr [two] 2fr [three] 2fr [four] 1fr [five] 1fr [six] 0.5fr [seven] 0.5fr [eight];
 }
 
-table {
-	width: 500px;
-	height: 540px;
-	border-collapse: collapse;
-	position: absolute;
-	left: -10px;
-	top: -10px;
+.border {
+	border: 5px solid black; 
 }
 
-tr, td {
-	border: 10px solid black;
-}
-
-
-
-tr td:first-child {
-	width: 44px;
+.left-border {
 	border-left: 0;
 }
 
-		tr td:nth-child(2) {
-			width: 55px;
-		}
+.right-border {
+	border-right: 0;
+}
 
-		tr td:nth-child(3) {
-			width: 55px;
-		}
-
-		tr td:nth-child(4) {
-			width: 122px;
-		}
-
-		tr td:nth-child(5) {
-			width: 71px;
-		}
-		
-		tr td:last-child {
-			width: 71px;
-			border-right: 0;
-		}
-
-tr:first-child td {
+.top-border {
 	border-top: 0;
-	height: 42px;
 }
 
-		tr:nth-child(2) {
-			height: 137px;
-		}
-
-		tr:nth-child(3) {
-			height: 137px;
-		}
-
-		tr:nth-child(4) {
-			height: 67px;
-		}
-
-		tr:nth-child(5) {
-			height: 65px;
-		}
-
-		tr:nth-child(6) {
-			height: 35px;
-		}
-
-		tr:last-child td {
-			border-bottom: 0;
-			height: 23px;
-		}
-
-.item_3_5 {
-	width: 71px;
+.bottom-border {
+	border-bottom: 0;
 }
 
-.yellow {
+.yellow1,
+.yellow2,
+.yellow3 {
 	background-color: #ffee59;
-}		
+}
 
 .orange {
 	background-color: #ff5b2d;
 }
 
-.black {
+.gray1,
+.gray2,
+.gray3,
+.gray4,
+.gray5 {
 	background-color: #202d28;
 }
 
 .blue {
 	background-color: #0e4d89;
 }
+
+.white1 {
+	grid-column: one/three;
+	grid-row: one/two;
+}
+
+.white2 {
+	grid-column: three/five;
+	grid-row: one/two;
+}
+
+.white3 {
+	grid-column: one/two;
+	grid-row: two/three;
+}
+
+.white4 {
+	grid-column: one/two;
+	grid-row: three/five;
+}
+
+.white5 {
+	grid-column: five/six;
+	grid-row: three/four;
+}
+
+.white6 {
+	grid-column: six/seven;
+	grid-row: three/four;
+}
+
+.white7 {
+	grid-column: four/five;
+	grid-row: four/five;
+}
+
+.white8 {
+	grid-column: five/seven;
+	grid-row: four/five;
+}
+
+.white9 {
+	grid-column: four/five;
+	grid-row: five/six;
+}
+
+.white10 {
+	grid-column: two/four;
+	grid-row: six/eight;
+}
+
+.white11 {
+	grid-column: four/seven;
+	grid-row: seven/eight;
+}
+
+.yellow1 {
+	grid-column: five/seven;
+	grid-row: one/two;
+}
+
+.yellow2 {
+	grid-column: five/seven;
+	grid-row: two/three;
+}
+
+.yellow3 {
+	grid-column: one/two;
+	grid-row: five/eight;
+}
+
+.orange {
+	grid-column: two/five;
+	grid-row: two/four;
+}
+
+.gray1 {
+	grid-column: two/three;
+	grid-row: four/five;
+}
+
+.gray2 {
+	grid-column: three/four;
+	grid-row: four/five;
+}
+
+.gray3 {
+	grid-column: two/three;
+	grid-row: five/six;
+}
+
+.gray4 {
+	grid-column: three/four;
+	grid-row: five/six;
+}
+
+.gray5 {
+	grid-column: four/five;
+	grid-row: six/seven;
+}
+
+.blue {
+	grid-column: five/seven;
+	grid-row: five/seven;
+}
+
